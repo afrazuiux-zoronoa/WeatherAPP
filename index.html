@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER APP</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://i.pinimg.com/1200x/06/c4/f7/06c4f70ec5931e2342e703e8a3f0a253.jpg"
+        type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div id="container">
+            <div class="title-bar">
+                <div class="mini-circles">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p>WEATHER APP</p>
+            </div>
+            <section>
+                <h4></h4>
+                <div class="head-text">
+                    <h3>Right now in</h3>
+                    <input id="cityInput" class="search" type="text" oninput="resize(this)">
+                    <h3>,it's <span id="conditionText">clear.</span> </h3>
+                </div>
+                <div class="weather-box">
+                    <div class="icon">
+                        <img id="weatherIcon" src="./Icons/clear.png" alt="">
+                    </div>
+                    <h1 id="temperature">24°C</h1>
+                    <div class="extra-info">
+                        <p><i class="ri-windy-line"></i> <span id="wind">8</span><span>mph</span></p>
+                        <p><i class="ri-speed-up-line"></i> <span id="pressure">0</span><span>hPa</span></p>
+                        <p><i class="ri-drop-line"></i> <span id="humidity">30</span><span>%</span></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

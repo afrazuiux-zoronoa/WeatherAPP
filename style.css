@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2); */
+    user-select: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("https://i.pinimg.com/1200x/ee/dd/b6/eeddb65b860c9ff8096d30dd7f71badb.jpg") center/cover no-repeat;
+}
+
+#container {
+    background: url("bg.jpg") center/cover no-repeat;
+    width: 70%;
+    height: 80%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    #container {
+        width: 88%;
+        height: 90%;
+    }
+}
+
+#container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+#container>* {
+    position: relative;
+    z-index: 2;
+}
+
+.title-bar {
+    width: 100%;
+    background-color: rgb(50, 50, 50);
+    padding: .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+
+.mini-circles {
+    position: absolute;
+    left: 1rem;
+}
+
+.mini-circles span:nth-child(1) {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #EE5C56;
+    border: 1px solid #ce4743;
+}
+
+.mini-circles span:nth-child(2) {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #F8BD32;
+    border: 1px solid #dea726;
+}
+
+.mini-circles span:nth-child(3) {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #61CA43;
+    border: 1px solid #4fb035;
+}
+
+@media (max-width: 768px) {
+    .title-bar {
+        justify-content: end;
+        padding-right: 1rem;
+    }
+
+    .title-bar p {
+        font-size: .8rem;
+    }
+
+    .mini-circles span {
+        width: 10px !important;
+        height: 10px !important;
+    }
+}
+
+section {
+    width: 100%;
+    /* height: 100%; */
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+h4 {
+    color: red;
+    text-decoration: underline;
+    font-weight: 400;
+    /* padding: 2rem 0; */
+}
+
+.head-text {
+    display: flex;
+    gap: 4px;
+}
+
+@media (max-width: 768px) {
+    .head-text {
+        justify-content: center;
+        font-size: .8rem;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .head-text input {
+        font-size: .8rem;
+    }
+}
+
+.head-text h3 {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
+#conditionText {
+    color: black;
+}
+
+.search {
+    background-color: rgb(255, 255, 255);
+    color: royalblue;
+    width: 2ch;
+    min-width: 2ch;
+    text-align: center;
+    max-width: 30ch;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0 .5rem;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.head-text input:focus {
+    outline: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-box {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+#temperature {
+    font-size: 6rem;
+    font-weight: 100;
+}
+
+
+.extra-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
+.extra-info #wind,
+#pressure,
+#humidity {
+    font-size: 1rem;
+}
+
+.extra-info p span {
+    font-size: .7rem;
+    padding: 0 1px;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 0;
+        gap: 1rem;
+    }
+
+    .weather-box {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .icon img {
+        width: 75px;
+        height: 75px;
+    }
+
+    #temperature {
+        font-size: 5rem;
+    }
+
+    .extra-info {
+        flex-direction: row;
+        padding: 1rem;
+    }
+}
