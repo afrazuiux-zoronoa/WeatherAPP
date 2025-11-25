@@ -14,32 +14,32 @@ let weatherIcon = document.querySelector("#weatherIcon");
 
 function getCustomIcon(iconCode) {
     const map = {
-        "01d": "./icons/clear.png",
-        "01n": "./icons/clear.png",
+        "01d": "./Icons/clear.png",
+        "01n": "./Icons/clear.png",
 
-        "02d": "./icons/fewclouds.png",
-        "02n": "./icons/fewclouds.png",
+        "02d": "./Icons/fewclouds.png",
+        "02n": "./Icons/fewclouds.png",
 
-        "03d": "./icons/scattered.png",
-        "03n": "./icons/scattered.png",
+        "03d": "./Icons/scattered.png",
+        "03n": "./Icons/scattered.png",
 
-        "04d": "./icons/broken.png",
-        "04n": "./icons/broken.png",
+        "04d": "./Icons/broken.png",
+        "04n": "./Icons/broken.png",
 
-        "09d": "./icons/shower.png",
-        "09n": "./icons/shower.png",
+        "09d": "./Icons/shower.png",
+        "09n": "./Icons/shower.png",
 
-        "10d": "./icons/rain.png",
-        "10n": "./icons/rain.png",
+        "10d": "./Icons/rain.png",
+        "10n": "./Icons/rain.png",
 
-        "11d": "./icons/thunder.png",
-        "11n": "./icons/thunder.png",
+        "11d": "./Icons/thunder.png",
+        "11n": "./Icons/thunder.png",
 
-        "13d": "./icons/snow.png",
-        "13n": "./icons/snow.png",
+        "13d": "./Icons/snow.png",
+        "13n": "./Icons/snow.png",
 
-        "50d": "./icons/mist.png",
-        "50n": "./icons/mist.png"
+        "50d": "./Icons/mist.png",
+        "50n": "./Icons/mist.png"
     };
 
     return map[iconCode];
